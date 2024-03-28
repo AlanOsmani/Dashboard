@@ -1,3 +1,4 @@
+import { click } from "@syncfusion/ej2/treemap";
 import React, {createContext, useContext, useState} from "react";
 
 
@@ -12,9 +13,13 @@ const initialState = {
 
 export const ContextProvider = ({children}) => {
     const [activeMenu, setActiveMenu] = useState(true);
+    const [isClicked, setIsClicked] = useState(initialState);
+    const handleClick = (clicked) => {setIsClicked({...initialState, [clicked]:true})}
+    const [screenSize, setScreenSize]= useState(undefined);
+    
     return (
         <StateContext.Provider 
-        value = {{activeMenu,setActiveMenu}}>
+        value = {{activeMenu,setActiveMenu, isClicked,setIsClicked, handleClick, screenSize, setScreenSize}}>
             {children}
         </StateContext.Provider>
     )

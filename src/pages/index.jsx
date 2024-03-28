@@ -9,6 +9,8 @@ export {  default as Custumer } from './Custumer';
 export {  default as ColorPicker } from './ColorPicker';
 export {  default as Calendario } from './Calendario';
 export {  default as AsignarTarea } from './AsignarTarea';
+export {  default as Usuario } from './Usuario';
+
 
 //export { default as Area } from './Charts/Area';
 //export { default as Bar } from './Charts/Bar';
