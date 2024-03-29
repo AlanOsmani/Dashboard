@@ -48,21 +48,21 @@ export const gridOrderStatus = (props) => (
 );
 
 export const kanbanGrid = [
-  { headerText: 'To Do',
-    keyField: 'Open',
+  { headerText: 'Por hacer',
+    keyField: 'Por hacer',
     allowToggle: true },
 
-  { headerText: 'In Progress',
-    keyField: 'InProgress',
+  { headerText: 'En progreso',
+    keyField: 'En proceso',
     allowToggle: true },
 
-  { headerText: 'Testing',
+  { headerText: 'Pruebas',
     keyField: 'Testing',
     allowToggle: true,
     isExpanded: false },
 
-  { headerText: 'Done',
-    keyField: 'Close',
+  { headerText: 'Completado',
+    keyField: 'Completado',
     allowToggle: true },
 ];
 const gridEmployeeProfile = (props) => (
@@ -2039,7 +2039,7 @@ export const kanbanData = [
   {
     Id: 'Task 1',
     Title: 'Task - 29001',
-    Status: 'Open',
+    Status: 'Por hacer',
     Summary: 'Analyze the new requirements gathered from the customer.',
     Type: 'Story',
     Priority: 'Low',
@@ -2047,13 +2047,13 @@ export const kanbanData = [
     Estimate: 3.5,
     Assignee: 'Nancy Davloio',
     RankId: 1,
-    Color: '#02897B',
+    Color: '#F08080',
     ClassName: 'e-story, e-low, e-nancy-davloio',
   },
   {
     Id: 'Task 2',
     Title: 'Task - 29002',
-    Status: 'InProgress',
+    Status: 'En proceso',
     Summary: 'Improve application performance',
     Type: 'Improvement',
     Priority: 'Normal',
@@ -2067,7 +2067,7 @@ export const kanbanData = [
   {
     Id: 'Task 3',
     Title: 'Task - 29003',
-    Status: 'Open',
+    Status: 'Por hacer',
     Summary: 'Arrange a web meeting with the customer to get new requirements.',
     Type: 'Others',
     Priority: 'Critical',
@@ -2081,7 +2081,7 @@ export const kanbanData = [
   {
     Id: 'Task 4',
     Title: 'Task - 29004',
-    Status: 'InProgress',
+    Status: 'En proceso',
     Summary: 'Fix the issues reported in the IE browser.',
     Type: 'Bug',
     Priority: 'Critical',
@@ -2095,7 +2095,7 @@ export const kanbanData = [
   {
     Id: 'Task 5',
     Title: 'Task - 29005',
-    Status: 'Review',
+    Status: 'Revision',
     Summary: 'Fix the issues reported by the customer.',
     Type: 'Bug',
     Priority: 'Low',
@@ -2123,7 +2123,7 @@ export const kanbanData = [
   {
     Id: 'Task 7',
     Title: 'Task - 29009',
-    Status: 'Review',
+    Status: 'Revision',
     Summary: 'Fix the issues reported in Safari browser.',
     Type: 'Bug',
     Priority: 'Critical',
