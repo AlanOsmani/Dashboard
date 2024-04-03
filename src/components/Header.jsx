@@ -1,12 +1,9 @@
 import React from 'react'
 
- const Header = ({category,title}) => {
+ const Header = ({title}) => {
   return (
-    <div className='mb-10'>
-      <p className='text-gray-400'>
-        {category}
-      </p>
-      <p className='text-3xl font-extrabold tracking-tight text-slate-900'>{title}</p>
+    <div className='mb-10 text-3xl font-semibold text-center text-indigo-700 underline uppercase '>
+      <p className='text-3xl font-extrabold tracking-tight text-indigo-700'>{title}</p>
     </div>
   )
 }

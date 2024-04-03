@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BsCurrencyDollar } from 'react-icons/bs';
 import {GoDotFill} from 'react-icons/go';
 import {Stacked, Pie,Button, SparkLine} from '../components';
@@ -6,6 +6,7 @@ import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'
 import { useStateContext } from '../contexts/Provider';
 
  const Inicio = () => {
+  const {currentColor} = useStateContext();
   return (
     <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
@@ -18,7 +19,7 @@ import { useStateContext } from '../contexts/Provider';
 
             </div>
             <div className='mt-6'>
-                <Button color="black" bgColor = "#FEFEFE" text = "Download" borderRadius = "10px" size="md" />
+                <Button color="black" bgColor = {currentColor} text = "Download" borderRadius = "10px" size="md" />
             </div>
           </div>
         <div  className='flex m-3 flex-wrap justify-center gap-1 items-center'>

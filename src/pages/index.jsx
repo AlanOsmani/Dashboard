@@ -12,6 +12,8 @@ export {  default as AsignarTarea } from './AsignarTarea';
 export {  default as Usuario } from './Usuario';
 
 
+
+
 //export { default as Area } from './Charts/Area';
 //export { default as Bar } from './Charts/Bar';
 //export { default as ColorMapping } from './Charts/ColorMapping';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { GrConfigure } from "react-icons/gr";
 import { GoFileSubmodule } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdVideoChat } from "react-icons/md";
@@ -528,6 +529,10 @@ export const links = [
       {
         name: 'Temas',
         icon: <BiColorFill />,
+      },
+      {
+        name: 'Configuracion',
+        icon: <GrConfigure />,
       },
     ],
   },

@@ -9,26 +9,25 @@ import './App.css';
 import { Switch } from '@syncfusion/ej2/buttons';
 
 export const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu,themeSettings, setthemeSettings, currentColor} = useStateContext();
 
   return (
     <div>
       <BrowserRouter basename="/">
         <div className="flex relative dark:bg-main-dark-bg">
-          {/* Settings button (potentially adjust position based on needs) */}
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
-                style={{ background: 'blue', borderRadius: '50%' }}
+                onClick={() => setthemeSettings(true)}
+                style={{ background: currentColor, borderRadius: '50%' }}
               >
                 <FiSettings />
               </button>
             </TooltipComponent>
           </div>
 
-          {/* Sidebar conditional rendering based on activeMenu state */}
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
               <Sidebar />
@@ -50,8 +49,9 @@ export const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
-
+            
             <div>
+              {themeSettings && <ThemeSettings/>}
               <Routes>
 
                 {/* Dashboard  */}
@@ -73,7 +73,7 @@ export const App = () => {
                 <Route path="/videoChat" element={<VideoChat />} />
                 <Route path="/temas" element={<ColorPicker />} />
 
-                {/* Catch-all route for unmatched paths */}
+
 
 
               </Routes>

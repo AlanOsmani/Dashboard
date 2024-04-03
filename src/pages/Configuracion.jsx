@@ -1,8 +1,9 @@
 import React from 'react'
+import {default as FConfiguracion} from '../forms/FConfiguracion';
 
 const Configuracion = () => {
   return (
-    <div>Configuracion</div>
-  )
+    <FConfiguracion />
+  );
 }
 export default Configuracion;
