@@ -9,10 +9,10 @@ import './App.css';
 import { Switch } from '@syncfusion/ej2/buttons';
 
 export const App = () => {
-  const { activeMenu,themeSettings, setthemeSettings, currentColor} = useStateContext();
+  const { activeMenu,themeSettings, setthemeSettings, currentColor, currentMode} = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter basename="/">
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
