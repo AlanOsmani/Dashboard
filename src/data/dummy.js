@@ -1,5 +1,7 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { FaRegMessage } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa";
 import { GrConfigure } from "react-icons/gr";
 import { GoFileSubmodule } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
@@ -527,10 +529,6 @@ export const links = [
         icon: <MdVideoChat />,
       },
       {
-        name: 'Temas',
-        icon: <BiColorFill />,
-      },
-      {
         name: 'Configuracion',
         icon: <GrConfigure />,
       },
@@ -828,23 +826,23 @@ export const themeColors = [
 
 export const userProfileData = [
   {
-    icon: <BsCurrencyDollar />,
-    title: 'My Profile',
-    desc: 'Account Settings',
+    icon: <FaRegUser />,
+    title: 'Mi perfil',
+    desc: 'Ajustes de Cuenta',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
   },
   {
-    icon: <BsShield />,
-    title: 'My Inbox',
-    desc: 'Messages & Emails',
+    icon: <FaRegMessage />,
+    title: 'Mi Inbox',
+    desc: 'Mensajes',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
   },
   {
     icon: <FiCreditCard />,
-    title: 'My Tasks',
-    desc: 'To-do and Daily Tasks',
+    title: 'Mis Tareas',
+    desc: 'Tareas por Hacer',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
   },

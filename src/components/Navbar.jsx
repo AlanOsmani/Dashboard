@@ -8,6 +8,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import  avatar from "../data/avatar.jpg"
 import {Cart,Chat, Notificacion, PerfilUsuario} from ".";
 import { useStateContext } from '../contexts/Provider'; 
+import { HandWrittenSignatureSettings } from '@syncfusion/ej2/pdfviewer';
 
 const NavButton = ({title, customFunc, icon, color, dotColor}) => (
     <TooltipComponent content={title} position='BottomCenter'>
@@ -37,9 +38,10 @@ const Navbar = () => {
     }
   }, [screenSize]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
-        <NavButton title="Menu" customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} color= {currentColor} icon= {<AiOutlineMenu/>} />
+        <NavButton title="Menu" customFunc={handleActiveMenu} color= {currentColor} icon= {<AiOutlineMenu/>} />
         <div className='flex'> 
             <NavButton title="Chat" customFunc={() => handleClick('chat')} color= {currentColor} icon= {<BsChatLeft/>} />  
             <NavButton title="Notificaciones" customFunc={() => handleClick("notificacion")} color= {currentColor} icon= {<RiNotification3Line/>} />
@@ -56,7 +58,7 @@ const Navbar = () => {
             </TooltipComponent>
             {isClicked.cart && <Cart />}
             {isClicked.chat && <Chat />}
-            {isClicked.notificion && <Notificacion />}
+            {isClicked.notificacion && <Notificacion />}
             {isClicked.perfilUsuario && <PerfilUsuario />}
 
 

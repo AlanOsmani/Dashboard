@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import { Navbar, Footer, Sidebar, ThemeSettings, Chat } from "./components";
 import { Inicio, AsignarTarea, Calendario, ChatTexto, ColorPicker, Configuracion, Entregas, Kanban, Proyecto, VideoChat, Usuario} from "./pages";
 import { useStateContext } from './contexts/Provider';
 import './App.css';
@@ -64,6 +64,8 @@ export const App = () => {
                 <Route path="/proyecto" element={<Proyecto />} />
                 <Route path="/configuracion" element={<Configuracion />} />
                 <Route path="/usuarios" element={<Usuario />} />
+                <Route path="/chatN" element={<Chat />} />
+
 
 
                 {/* Apps */}
@@ -71,13 +73,13 @@ export const App = () => {
                 <Route path="/calendario" element={<Calendario />} />
                 <Route path="/chat" element={<ChatTexto />} />
                 <Route path="/videoChat" element={<VideoChat />} />
-                <Route path="/temas" element={<ColorPicker />} />
 
 
 
 
               </Routes>
             </div>
+            <Footer/>
           </div>
         </div>
       </BrowserRouter>

@@ -25,7 +25,7 @@ const Sidebar = () => {
                     <RiMoonClearLine /> <span>CLEAR</span>
                 </Link>
                 <TooltipComponent content= "Menu" position='BottomCenter'>
-                    <button type='button' onClick={() =>setActiveMenu((prevActiveMenu) => !prevActiveMenu )} className='text-xl rounded-full p-3 
+                    <button type='button' onClick={!activeMenu} className='text-xl rounded-full p-3 
                     hover:bg-light-gray mt-4 block md:hidden'>
                         <MdCancel />
                     </button>
